@@ -4,7 +4,7 @@
       <icon :name="iconName" class="mr-2" />
       <span>{{ item.title }}</span>
     </div>
-    <div v-if="expanded">
+    <div v-if="expanded && hasChildren">
       <TreeItem v-for="(child, i) of item.children" :key="index" :item="child" :index="index + i" :depth="depth + 1"> </TreeItem>
     </div>
   </div>
